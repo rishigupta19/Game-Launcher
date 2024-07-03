@@ -1,0 +1,618 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rajdhani", sans-serif;
+}
+
+body {
+  width: 100%;
+  background: #0c111b;
+  position: relative;
+  font-weight: 500;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 1%;
+  background: #0c111b;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+}
+
+.nav-items a {
+  text-decoration: none;
+  padding: 40px;
+  margin-left: -40px;
+  text-transform: capitalize;
+  color: #fff;
+  position: relative;
+}
+
+.brand-logo {
+  height: 100px;
+  width: auto;
+  margin-right: 20px;
+  background: transparent;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.right-container {
+  display: block;
+  margin-left: auto;
+}
+
+.search-box {
+  border: none;
+  border-bottom: 1px solid #aaa;
+  background: transparent;
+  outline: none;
+  height: 30px;
+  color: #fff;
+  width: 250px;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.sub-btn {
+  background-color: #007bff;
+  height: 30px;
+  padding: 0 15px;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 10px;
+  cursor: pointer;
+  margin-right: -2px;
+}
+
+.sub-btn:hover,
+.login-link:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.sub-btn:active,
+.login-link:active {
+  background-color: #003f7f;
+}
+
+.login-link {
+  background-color: #007bff;
+  height: 30px;
+  padding: 6.3px 15px;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  padding: 20px 0;
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+.carousel {
+  display: flex;
+  width: 92%;
+  height: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.slider {
+  flex: 0 0 auto;
+  margin-right: 30px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+}
+
+.slide-content {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(to right, #030b17 80%, #0c111b00);
+  color: #fff;
+}
+
+.game-title {
+  padding-left: 50px;
+  text-transform: capitalize;
+  margin-top: 80px;
+}
+
+.game-des {
+  width: 80%;
+  line-height: 30px;
+  padding-left: 50px;
+  margin-top: 30px;
+  opacity: 0.8;
+}
+
+.title {
+  color: #fff;
+  opacity: 0.9;
+  padding-left: 5%;
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.games-list {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  margin: 10px 0 20px;
+}
+
+.card-container {
+  position: relative;
+  width: 92%;
+  padding-left: 10px;
+  height: 220px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  position: relative;
+  min-width: 150px;
+  width: 250px;
+  height: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card:hover .card-body {
+  opacity: 1;
+}
+
+.card-body {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.name {
+  color: #e3dfff;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-top: 60%;
+}
+
+.des {
+  color: #ffffff;
+  opacity: 0.8;
+  margin: 5px 0;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.news {
+  background-color: #0c111b;
+  padding: 20px;
+}
+
+.news-block {
+  max-width: 1370px;
+  margin: 0 auto;
+}
+
+.news-title {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.news-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.news-article {
+  background-image: linear-gradient(
+    to right,
+    #ae8625,
+    #bb9a42,
+    #c8ad5d,
+    #d6c178,
+    #e4d594,
+    #e9db9a,
+    #efe09f,
+    #f4e6a5,
+    #f2df95,
+    #f0d886,
+    #eed177,
+    #edc967
+  );
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.article-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.article-description {
+  margin-bottom: 15px;
+}
+
+.article-link {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.article-link:hover {
+  background-color: #0056b3;
+}
+
+hr {
+  background-image: linear-gradient(
+    to right,
+    #3a4e48,
+    #435650,
+    #4c5e59,
+    #556761,
+    #5e6f6a,
+    #647670,
+    #6a7d75,
+    #70847b,
+    #758a7e,
+    #7b9180,
+    #839782,
+    #8b9d83
+  );
+  height: 5px;
+  border: none;
+}
+
+.footer {
+  background-color: #0c111b;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  flex: 1 1 100px;
+  max-width: 100px;
+}
+
+.footer-logo img {
+  max-width: 300px;
+}
+
+.footer-links {
+  flex: 1 1 200px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+.social-icons {
+  width: 100%;
+}
+
+.social-icons a {
+  margin-bottom: 10px;
+  display: inline;
+}
+
+.social-icons img {
+  height: 30px;
+  margin: 20px;
+}
+
+.footer-info {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.games-list {
+  position: relative;
+  width: 100%;
+  text-transform: capitalize;
+  background: none;
+  border: none;
+  font-weight: 500;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 5px 0;
+  cursor: pointer;
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+
+.games-list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -5px;
+  height: 35px;
+  width: 35px;
+  background-size: cover;
+  transform: scale(0.4);
+}
+
+.games-list:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.pre-btn,
+.nxt-btn {
+  position: absolute;
+  top: 0;
+  width: 5%;
+  height: 100%;
+  z-index: 2;
+  border: none;
+  cursor: pointer;
+  outline: 2px;
+}
+
+.pre-btn {
+  left: 0;
+  background: linear-gradient(to right, #0c111b 0%, #0c111b00);
+}
+
+.nxt-btn {
+  right: 0;
+  background: linear-gradient(to left, #0c111b 0%, #0c111b00);
+}
+
+.pre-btn img,
+.nxt-btn img {
+  width: 15px;
+  height: 20px;
+  opacity: 0;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
+
+.library-btn {
+  background-image: linear-gradient(
+    to right,
+    rgb(174, 134, 37),
+    rgb(187, 154, 66),
+    rgb(200, 173, 93),
+    rgb(214, 193, 120),
+    rgb(228, 213, 148),
+    rgb(233, 219, 154),
+    rgb(239, 224, 159),
+    rgb(244, 230, 165),
+    rgb(242, 223, 149),
+    rgb(240, 216, 134),
+    rgb(238, 209, 119),
+    rgb(237, 201, 103)
+  );
+  border-color: rgb(255, 196, 0);
+  color: rgb(50, 50, 50);
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 2px 2px 2px 2px;
+}
+
+.library-btn:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(156, 120, 33),
+    rgb(168, 138, 59),
+    rgb(180, 155, 84),
+    rgb(192, 172, 108),
+    rgb(204, 189, 133),
+    rgb(209, 194, 138),
+    rgb(214, 198, 143),
+    rgb(219, 204, 148),
+    rgb(217, 198, 134),
+    rgb(216, 192, 121),
+    rgb(214, 186, 107),
+    rgb(213, 178, 93)
+  );
+  border-color: rgb(255, 196, 100);
+  color: rgb(50, 50, 50);
+}
+
+.library-btn:active {
+  background-image: linear-gradient(
+    to right,
+    rgb(138, 107, 30),
+    rgb(150, 123, 53),
+    rgb(161, 138, 76),
+    rgb(171, 155, 98),
+    rgb(182, 172, 122),
+    rgb(186, 176, 127),
+    rgb(191, 181, 132),
+    rgb(195, 186, 137),
+    rgb(194, 181, 124),
+    rgb(192, 175, 112),
+    rgb(190, 169, 99),
+    rgb(189, 162, 87)
+  );
+  border-color: rgb(255, 196, 0);
+  color: rgb(50, 50, 50);
+}
+
+.sub-btn,
+.library-btn,
+.login-link {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    margin: 2px;
+    max-width: 58%;
+  }
+
+  .brand-logo {
+    height: 80px;
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  .nav-items {
+    margin: 10px 0;
+  }
+
+  .nav-items a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .right-container {
+    margin-left: auto;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .search-box {
+    width: 80%;
+  }
+
+  .carousel-container {
+    height: 500px;
+  }
+
+  .games-list {
+    text-align: center;
+  }
+
+  .card-container {
+    padding: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .card {
+    margin-right: 10px;
+    min-width: 120px;
+    width: 160px;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .news-content {
+    display: block;
+  }
+}
